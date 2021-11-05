@@ -1,0 +1,11 @@
+[core]
+	autocrlf = input
+[color]
+	ui = auto
+[alias]
+	lol = log --graph --oneline --decorate --color --all
+	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; :"
+[init]
+	defaultBranch = main
+[user]
+	useConfigOnly = true

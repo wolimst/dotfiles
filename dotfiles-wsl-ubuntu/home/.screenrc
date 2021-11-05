@@ -1,0 +1,17 @@
+#
+# ~/.screenrc
+#
+
+term screen-256color
+
+hardstatus off
+hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}]'
+
+startup_message off
+
+termcapinfo xterm* ti@:te@
+
+vbell off
+
+# change escape key to ctrl+j
+escape ^Jj
