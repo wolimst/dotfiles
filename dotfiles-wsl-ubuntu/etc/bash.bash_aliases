@@ -21,6 +21,10 @@ if [ -x "$(command -v nvim)" ]; then
   alias vim="nvim"
 fi
 
+if [ -x "$(command -v tldr)" ]; then
+  alias tldr="tldr -t base16"
+fi
+
 alias grep="grep --color"
 alias egrep="egrep --color"
 alias fgrep="fgrep --color"
@@ -29,3 +33,4 @@ alias diff="diff --color"
 alias python="python3"
 alias ipython="ipython3"
 alias pip="pip3"
+alias pypy="pypy3"

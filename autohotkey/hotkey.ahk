@@ -33,10 +33,15 @@ CapsLock & 4:: End
 CapsLock & u::
     if (GetKeyState("Control", "P"))
         Send {PgUp}
+    else
+        Send {u}
     return
+
 CapsLock & d::
     if (GetKeyState("Control", "P"))
         Send {PgDn}
+    else
+        Send {d}
     return
 
 CapsLock & b::
@@ -55,6 +60,7 @@ CapsLock & w::
 
 ; Text modifications
 CapsLock & x:: Delete
+
 CapsLock & h::
     if (GetKeyState("Control", "P"))
         Send {BackSpace}
@@ -65,10 +71,15 @@ CapsLock & h::
 CapsLock & C::
     if (GetKeyState("Shift", "P"))
         Send {Shift down}{End}{Shift up}{Delete}
+    else
+        Send {c}
     return
+
 CapsLock & S::
     if (GetKeyState("Shift", "P"))
         Send {Home}{Shift down}{End}{Shift up}{Delete}
+    else
+        Send {s}
     return
 
 ; Change the hotkey to enable CapsLock and disable CapsLock key.
