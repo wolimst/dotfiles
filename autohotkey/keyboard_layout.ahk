@@ -13,19 +13,21 @@ CapsLock & n::
 ; Change keyboard layout to Korean and turn on the IME
 CapsLock & ,::
     PostMessage 0x50, 0, 0x4120412,, A
-    ime_on := is_ime_on()
-    if (ime_on = 0)
-        Send {vk15sc138}
     KeyWait, CapsLock
+    if (is_ime_on() = 0)
+        Send {vk15sc138}
+    if (is_ime_on() = 0) ; For some reasons, ime is not turned on sometimes. Checking twice seems working.
+        Send {vk15sc138}
     return
 
 ; Change keyboard layout to Japanese and turn on the IME
 CapsLock & .::
     PostMessage 0x50, 0, 0x4110411,, A
-    ime_on := is_ime_on()
-    if (ime_on = 0)
-        Send {LAlt down}{``}{LAlt up}
     KeyWait, CapsLock
+    if (is_ime_on() = 0)
+        Send {LAlt down}{``}{LAlt up}
+    if (is_ime_on() = 0)  ; For some reasons, ime is not turned on sometimes. Checking twice seems working.
+        Send {LAlt down}{``}{LAlt up}
     return
 
 ; Return 1 if IME is on, else 0
