@@ -1,10 +1,9 @@
 ; Frequently used modifiers
 ; + Shift, ^ Control, ! Alt, # Win, * Wildcard
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
 #SingleInstance force
-CoordMode, ToolTip, Screen
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetCapsLockState, AlwaysOff
 return
 

@@ -12,6 +12,8 @@
 ; Modifier is changed to LWin.
 
 #NoEnv
+#SingleInstance force
+SendMode Input
 
 LWin & LButton::
     CoordMode, Mouse  ; Switch to screen/absolute coordinates.

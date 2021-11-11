@@ -2,8 +2,7 @@
 
 #NoEnv
 #SingleInstance force
-
-CoordMode, ToolTip, Screen
+SendMode Input
 
 #m:: ; WinKey + M
 
@@ -17,14 +16,14 @@ CoordMode, ToolTip, Screen
     {
         SoundSet, +1, MASTER, MUTE, % mixer_value
         if (mic_mute = "On")
-            ToolTip, Microphone On, 0, 9999
+            ToolTip, Microphone On
         else
-            ToolTip, Microphone Off, 0, 9999
+            ToolTip, Microphone Off
         SetTimer, RemoveMicToolTip, 1000
     }
     else
     {
-        ToolTip, Cannot control microphone, 0, 9999
+        ToolTip, Cannot find microphone
         SetTimer, RemoveMicToolTip, 1000
     }
 return

@@ -1,7 +1,8 @@
 ﻿; https://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+#NoEnv
+#SingleInstance force
+SendMode Input
 
 ; General Symbols
 :CO?:\copyright::©

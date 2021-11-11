@@ -6,8 +6,9 @@
 ; > Right (e.g. >+<^a:: Right Shift + Left Ctrl + A)
 ; * Wildcard
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+#NoEnv
+#SingleInstance force
+SendMode Input
 
 #F::Run, firefox.exe
 #G::Run, notepad.exe
@@ -90,7 +91,7 @@ RControl & CapsLock::
     else
         SetCapsLockState, On
 return
-CapsLock:: return
+; CapsLock:: return ; Used on keyboard_layout.ahk
 
 ; Toggle focus on the taskbar
 CapsLock & F2::
