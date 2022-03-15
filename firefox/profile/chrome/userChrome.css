@@ -1,54 +1,67 @@
 :root {
-    --thin-tab-width: 30px;
-    --wide-tab-width: 300px;
+  --thin-tab-width: 30px;
+  --wide-tab-width: 300px;
 }
 
 /* Center url text */
-#urlbar:not([focused]) #urlbar-input, #urlbar:not([focused]) .urlbar-input {
-    text-align: center !important;
+#urlbar:not([focused]) #urlbar-input,
+#urlbar:not([focused]) .urlbar-input {
+  text-align: center !important;
+}
+
+/* Center bookmarks toolbar */
+#PersonalToolbar {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 /* Hide horizontal tabs at the top of the window */
 #tabbrowser-tabs {
-    visibility: collapse !important;
+  visibility: collapse !important;
 }
 #nav-bar {
-    margin-top: 6.5px;
+  margin-top: 6.5px;
 }
 
 /* Move minimize, maximize and close buttons */
 #titlebar {
-    margin-top: 6px !important;
-    margin-bottom: calc(-6px - var(--tab-min-height)) !important;
-    margin-right: 6px;
+  margin-top: 6px !important;
+  margin-bottom: calc(-6px - var(--tab-min-height)) !important;
+  margin-right: 6px;
 }
 
 /* Make place for the minimize, maximize, close buttons and private browsing indicator */
 #nav-bar {
-    margin-right: 150px;
+  margin-right: 150px;
 }
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
-    margin-right: 195px;
+  margin-right: 195px;
 }
 
-/* Hide the Tree Style Tab header at the top of the sidebar*/
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+/* Tree Style Tab Extension ID: treestyletab_piro_sakura_ne_jp */
+/* Sidebery Extension ID: _3c078156-979c-498b-8990-85f7987dd929_ */
+
+/* Hide the vertical tab pane header at the top of the sidebar */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+  #sidebar-header {
   display: none;
 }
 
-/* Collapse the Tree Style Tab in default state and add transition & expand on hover */
+/* Collapse the vertical tab pane in default state and add transition & expand on hover */
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    position: relative !important;
-    overflow: hidden;
-    min-width: var(--thin-tab-width);
-    max-width: var(--thin-tab-width);
-    transition: all 0.1s ease;
-    z-index: 2;
+  position: relative !important;
+  overflow: hidden;
+  min-width: var(--thin-tab-width);
+  max-width: var(--thin-tab-width);
+  transition: all 0.1s ease;
+  z-index: 2;
 }
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
-    min-width: var(--wide-tab-width) !important;
-    max-width: var(--wide-tab-width) !important;
-    /* Negative right-margin to keep page body being pushed to the right */
-    margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
-    z-index: 1;
+  min-width: var(--wide-tab-width) !important;
+  max-width: var(--wide-tab-width) !important;
+  /* Negative right-margin to prevent page body being pushed to the right */
+  margin-right: calc(
+    (var(--wide-tab-width) - var(--thin-tab-width)) * -1
+  ) !important;
+  z-index: 1;
 }

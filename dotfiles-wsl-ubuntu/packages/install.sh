@@ -5,11 +5,12 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-apt upgrade
+apt update && apt upgrade -y
 
 apt install -y \
     bat \
-    neovim
+    neovim \
+    neofetch
 
 # Python3
 apt install -y \
@@ -29,5 +30,6 @@ apt install -y \
 apt install -y nodejs npm && npm install -g n && n lts
 
 npm install -g \
-    yarn
+    npm \
+    yarn \
     tldr
