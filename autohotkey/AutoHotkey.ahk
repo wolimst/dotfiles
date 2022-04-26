@@ -7,9 +7,10 @@ SendMode Input ; Recommended for new scripts due to its superior speed and relia
 SetCapsLockState, AlwaysOff
 return
 
-#include keyboard_layout.ahk
-#include hotkey.ahk
-#include toggle_microphone_mute.ahk
 #include always_on_top.ahk
+#include awake.ahk
 #include easy_window_dragging.ahk
 #include input_symbol.ahk
+#include hotkey.ahk
+#include keyboard_layout.ahk
+#include toggle_microphone_mute.ahk
