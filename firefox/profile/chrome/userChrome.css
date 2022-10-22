@@ -19,14 +19,13 @@
 #tabbrowser-tabs {
   visibility: collapse !important;
 }
-#nav-bar {
-  margin-top: 6.5px;
-}
 
 /* Move minimize, maximize and close buttons */
 #titlebar {
-  margin-top: 6px !important;
-  margin-bottom: calc(-6px - var(--tab-min-height)) !important;
+  margin-bottom: calc(0px - var(--tab-min-height)) !important;
+}
+.titlebar-buttonbox {
+  margin-top: 5px;
   margin-right: 6px;
 }
 
@@ -35,7 +34,11 @@
   margin-right: 150px;
 }
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
-  margin-right: 195px;
+  margin-right: 285px;
+}
+#main-window[privatebrowsingmode="temporary"]
+  #private-browsing-indicator-with-label {
+  margin-top: 5px;
 }
 
 /* Tree Style Tab Extension ID: treestyletab_piro_sakura_ne_jp */
